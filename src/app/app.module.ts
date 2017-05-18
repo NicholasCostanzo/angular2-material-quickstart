@@ -1,18 +1,31 @@
+// Import angular modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material';
 
-import { AppComponent } from './app.component';
+// Import other modules
+import 'hammerjs';
+
+// Import routing
+import { routing } from './app.routing';
+
+// Import components
+import { AppComponent } from './components/app.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
